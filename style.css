@@ -1,13 +1,20 @@
-
 .main{
     border:2px solid black;
     margin: 15px auto;
-    padding: 0 15 15 15px;
+    padding: 0 15px 15px 15px;
     text-align:center;
     box-sizing:border-box;
     max-width:350px;
     width:90%;
 }
+
+.main input,
+.main button {
+    width: 90%;  
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
 .question{
     font-size:20px;
     font-weight:bold;

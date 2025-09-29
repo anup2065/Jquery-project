@@ -1,0 +1,194 @@
+
+<html>
+  <head>
+    <title>DOM Manipulation and Event Handling Task</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <div>
+      <h3>DOM Manipulation and Event Handling Task</h3>
+    </div>
+
+    <form name="form1" class="main">
+        <h1>Calculator</h1>
+      <div>
+        <label>Number 1:</label>
+        <input type="number" name="num1" id="num1" value="">
+      </div>
+      <br>
+
+      <div>
+        <label>Number 2:</label>
+        <input type="number" name="num2" id="num2" value="">
+      </div>
+      <br>
+
+      <div>
+        <button type="button" id="add" style="color:green">ADD</button>
+        <button type="button" id="sub" style="color:red">SUBTRACT</button>
+        <button type="button" id="mul" style="color:blue">MULTIPLY</button>
+        <br><br>
+        <button type="button" id="divi" style="color:orange">DIVIDE</button>
+        <button type="button" id="mod" style="color:pink">MODULUS</button>
+      </div>
+      <br>
+
+      <div>
+        <label>Result:</label>
+        <input type="number" name="result" id="result" value="">
+      </div>
+    </form>
+<br>
+    <div class="qa">
+        <h1>Question Answers: </h1>
+    </div>
+
+<div id="question1" class="question">1. What is an event in JavaScript? Give examples.</div>
+<button id="btn1">Answer</button>
+<div id="answer1" class="answer">
+In JavaScript, an event is an action or occurrence that happens in the browser, which can be detected and responded to using JavaScript code. Events are generally triggered by user interactions such as clicking, typing, or moving the mouse, as well as browser actions like loading a page or resizing the window. By handling events, developers can create interactive and dynamic web pages. Examples include:
+<ul>
+<li><strong>click:</strong> Triggered when a user clicks a button, link, or any clickable element.</li>
+<li><strong>keydown:</strong> Triggered when a user presses any key on the keyboard.</li>
+<li><strong>load:</strong> Triggered when the browser finishes loading the entire webpage.</li>
+<li><strong>submit:</strong> Triggered when a user submits a form, allowing validation before sending data.</li>
+<li><strong>mousemove:</strong> Triggered whenever the mouse pointer moves over a specific element.</li>
+</ul>
+</div>
+<br>
+
+<div id="question2" class="question">2. What are the different ways to handle events in JavaScript?</div>
+<button id="btn2">Answer</button>
+<div id="answer2" class="answer">
+There are three primary ways to handle events in JavaScript, each with its own advantages:
+<ul>
+<li><strong>Inline event handling:</strong> Writing the event directly in the HTML element using attributes like <code>onclick</code>. This is simple but mixes HTML and JavaScript. Example: &lt;button onclick="alert('Hello');"&gt;Click Me&lt;/button&gt;</li>
+<li><strong>Event handler properties:</strong> Assigning a function directly to the element's event property in JavaScript. This allows separation of JavaScript from HTML but can only handle one function per event. Example: 
+<pre>let btn = document.getElementById('myButton'); 
+btn.onclick = function() { alert('Hello!'); };</pre>
+</li>
+<li><strong>Using <code>addEventListener()</code>:</strong> Attaching multiple event handlers to the same element for the same event without overwriting previous handlers. This is the most flexible and modern method. Example:
+<pre>let btn = document.getElementById('myButton'); 
+btn.addEventListener('click', function() { alert('Hello!'); });</pre>
+</li>
+</ul>
+</div>
+<br>
+
+<div id="question3" class="question">3. What is the difference between inline event handling and using addEventListener()?</div>
+<button id="btn3">Answer</button>
+<div id="answer3" class="answer">
+Inline event handling is written directly within the HTML tag, which mixes the structure of the webpage with behavior. It allows only one event handler per element, making it less flexible. On the other hand, <code>addEventListener()</code> keeps the JavaScript separate from HTML, supports multiple event handlers on the same element, and provides more control over event behavior such as event capturing and bubbling. It is considered a modern and best practice approach.
+</div>
+<br>
+
+<div id="question4" class="question">4. What are keyboard events in JavaScript? Give examples.</div>
+<button id="btn4">Answer</button>
+<div id="answer4" class="answer">
+Keyboard events are events triggered when the user interacts with the keyboard. They allow developers to detect key presses and perform specific actions, which is useful for form validation, games, or custom shortcuts. Examples:
+<ul>
+<li><strong>keydown:</strong> Fires when a key is pressed down.</li>
+<li><strong>keyup:</strong> Fires when a key is released.</li>
+<li><strong>keypress:</strong> Fires when a key that produces a character is pressed (now deprecated in favor of <code>keydown</code> and <code>keyup</code>).</li>
+</ul>
+</div>
+<br>
+
+<div id="question5" class="question">5. What are mouse events in JavaScript? Give examples.</div>
+<button id="btn5">Answer</button>
+<div id="answer5" class="answer">
+Mouse events occur when the user interacts with a mouse or similar pointing device. They are useful for creating interactive elements such as buttons, menus, drag-and-drop interfaces, or animations. Examples:
+<ul>
+<li><strong>click:</strong> Fires when an element is clicked.</li>
+<li><strong>dblclick:</strong> Fires when the element is double-clicked.</li>
+<li><strong>mouseenter / mouseleave:</strong> Fires when the mouse enters or leaves an element, commonly used for hover effects.</li>
+<li><strong>mousedown / mouseup:</strong> Fires when the mouse button is pressed down or released over an element.</li>
+<li><strong>mousemove:</strong> Fires whenever the mouse moves over an element, useful for drawing or tracking mouse position.</li>
+</ul>
+</div>
+<br>
+
+<div id="question6" class="question">6. What is jQuery, and why is it used?</div>
+<button id="btn6">Answer</button>
+<div id="answer6" class="answer">
+jQuery is a fast, small, and feature-rich JavaScript library that simplifies tasks like HTML document traversal, event handling, animation, and AJAX requests. It is widely used because it reduces the amount of code developers need to write and handles differences between browsers automatically. With jQuery, even complex operations like selecting elements, changing styles, or making AJAX calls can be done with concise and readable code.
+</div>
+<br>
+
+<div id="question7" class="question">7. How do you include jQuery in a webpage?</div>
+<button id="btn7">Answer</button>
+<div id="answer7" class="answer">
+jQuery can be included in a webpage either via a CDN (Content Delivery Network) or by downloading a local copy. Using a CDN is common and ensures fast loading:
+<pre>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;</pre>
+Alternatively, you can download jQuery and include it locally:
+<pre>&lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;</pre>
+Including jQuery allows you to use its functions and methods throughout your webpage.
+</div>
+<br>
+
+<div id="question8" class="question">8. What is the difference between $(document).ready() and window.onload?</div>
+<button id="btn8">Answer</button>
+<div id="answer8" class="answer">
+<code>$(document).ready()</code> executes code as soon as the HTML DOM is fully loaded, without waiting for images, stylesheets, or other resources. This allows scripts to interact with page elements quickly. <code>window.onload</code> waits until the entire page, including images, stylesheets, and other external resources, is completely loaded before executing the code. Therefore, <code>$(document).ready()</code> is usually faster and preferred for most DOM manipulations.
+</div>
+<br>
+
+<div id="question9" class="question">9. How do you select elements in jQuery? Give examples.</div>
+<button id="btn9">Answer</button>
+<div id="answer9" class="answer">
+In jQuery, you can select elements using different types of selectors, making DOM manipulation simple and flexible. Examples:
+<ul>
+<li><strong>By ID:</strong> <code>$("#elementID")</code> selects a single element with the specified ID.</li>
+<li><strong>By class:</strong> <code>$(".className")</code> selects all elements with the specified class.</li>
+<li><strong>By tag:</strong> <code>$("p")</code> selects all paragraph elements.</li>
+<li><strong>By attribute:</strong> <code>$("[name='num1']")</code> selects elements with a specific attribute value.</li>
+</ul>
+</div>
+<br>
+
+<div id="question10" class="question">10. Explain the use of jQuery event handling methods like .click(), .submit(), .hover(), .append(), .prepend(), .before(), .after().</div>
+<button id="btn10">Answer</button>
+<div id="answer10" class="answer">
+These jQuery methods simplify event handling and DOM manipulation:
+<br>
+<strong>.click():</strong> Attaches a click event handler to elements, allowing actions when the user clicks them.<br>
+<strong>.submit():</strong> Attaches a submit event handler to forms, useful for validation or custom form behavior.<br>
+<strong>.hover():</strong> Handles mouse enter and leave events, commonly used for changing styles on hover.<br>
+<strong>.append():</strong> Adds content to the end of the selected elements.<br>
+<strong>.prepend():</strong> Adds content at the beginning of selected elements.<br>
+<strong>.before():</strong> Inserts content directly before selected elements in the DOM.<br>
+<strong>.after():</strong> Inserts content directly after selected elements in the DOM.<br>
+These methods make creating dynamic, interactive pages easier without writing complex JavaScript.
+</div>
+<br>
+
+<div id="question11" class="question">11. What is the difference between .html(), .css(), .text(), and .val() in jQuery?</div>
+<button id="btn11">Answer</button>
+<div id="answer11" class="answer">
+These jQuery methods are used to get or set content and properties of elements:
+<br>
+<strong>.html():</strong> Gets or sets the HTML content of an element, including any nested tags.<br>
+<strong>.text():</strong> Gets or sets the plain text content of an element without any HTML.<br>
+<strong>.css():</strong> Gets or sets CSS properties of elements, allowing dynamic style changes.<br>
+<strong>.val():</strong> Gets or sets the value of form elements such as input, select, or textarea, useful for reading user input or dynamically changing it.
+</div>
+<br>
+
+<div id="question12" class="question">12. How do you show, hide, and toggle elements in jQuery?</div>
+<button id="btn12">Answer</button>
+<div id="answer12" class="answer">
+jQuery provides simple methods to control the visibility of elements:
+<br>
+<strong>.show():</strong> Makes hidden elements visible, often with optional animation effects.<br>
+<strong>.hide():</strong> Hides visible elements, optionally with animation.<br>
+<strong>.toggle():</strong> Switches visibility of elements; it shows the element if hidden, and hides it if visible. These methods allow developers to create interactive UI elements without complex JavaScript logic.
+</div>
+<br>
+
+
+  </body>
+</html>
+

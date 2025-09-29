@@ -1,0 +1,11 @@
+
+.main{
+    border:2px solid black;
+    margin: 15 490 15 490px;
+    padding: 0 15 15 15px;
+    text-align:center;
+}
+.question{
+    font-size:20px;
+    font-weight:bold;
+}
